@@ -33,7 +33,7 @@ def transform_lenguaje(texto):
     print(lenguaje_hacker)
 
 
-transform_lenguaje("REAL")
+# transform_lenguaje("REAL")
 
 # Solución de MoureDev
 
