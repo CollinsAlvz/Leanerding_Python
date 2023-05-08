@@ -111,4 +111,69 @@ def large_txt(list):
     return print(f'"{large}" es el texto mas largo')
 
 
-large_txt(["texto", "mas", "largo", "esparanza", "cosas"])
+def filter_words(list, n):
+    word = " "
+    for i in list:
+        if len(i) == n:
+            word += i + " "
+
+    return print(word)
+
+
+def filter_uppers(cadena):
+    cont = 0
+    for i in cadena:
+        if i == i.upper():
+            cont += 1
+
+    if cont == 0:
+        return print("No cuenta con letras mayusculas")
+    elif cont == 1:
+        return print(f"Tiene {cont} mayuscula")
+    else:
+        return print(f"Tiene {cont} letras mayusculas")
+
+
+def convert_binary():
+    numero_binario = input("Ingrese un número binario: ")
+
+    if not all(c in '01' for c in numero_binario):
+        return print("El número ingresado no es un número binario válido.")
+    else:
+        decimal = 0
+        for posicion, digito in enumerate(numero_binario[::-1]):
+            decimal += int(digito) * 2 ** posicion
+
+        return print("El número decimal es:", decimal)
+
+
+def edad_actual():
+    edad, año_actual, año_nacimiento, nombre, implimir = 0, "", "", "", ""
+
+    año_actual = input("Ingrese el año actual: ")
+
+    for i in range(1, 4):
+        nombre = input("Ingrese su nombre: ")
+        año_nacimiento = input("Ingrese el año de su nacimiento: ")
+
+        edad = int(año_actual) - int(año_nacimiento)
+        implimir += f"{nombre} cumplira {edad} años en {año_actual} \n"
+
+    return print(implimir)
+
+
+def edades_mayores_a20(tuple_edades):
+    # tuple_edades = ()
+    cont = 0
+
+    # for i in range(1, 6):
+    #     tuple_edades = input(f"{i}.Ingrese una edad: ")
+
+    for i in tuple_edades:
+        if i > 20:
+            cont += 1
+
+    return print(f"{cont} es la cantidad de presonas mayores a 20")
+
+
+edades_mayores_a20((12, 43, 12, 65, 23))
