@@ -1,21 +1,3 @@
-def otra_cosa():
-    print('"En este curso aprederemos sobre "Python" en un leguaje de prgramación"')
-
-    type_int = 450
-    type_float = 18.5
-    mensaje = '"Esta es la segunda sesion sobre el lenguaje Python"'
-
-    print(mensaje, "tipo de dato: ", type(mensaje), type_int, "tipo de dato: ", type(
-        type_int), type_float, "tipo de dato: ", type(type_float))
-
-    num_1, num_2, num_3, num_4 = 2, 3, 4, 17
-
-    print(num_2 ** num_3)
-    print(num_4 * num_1)
-    print(num_4/num_1)
-    print(num_4//num_1)
-    print(pow(num_1, num_3))
-
 
 def max(a, b):  # Numero Mayor entre dos numeros
     if a > b:
@@ -162,7 +144,7 @@ def edad_actual():
     return print(implimir)
 
 
-def edades_mayores_a20(tuple_edades):
+def edades_mayores_a20(tuple_edades):  # ultimar detalles
     # tuple_edades = ()
     cont = 0
 
@@ -176,4 +158,20 @@ def edades_mayores_a20(tuple_edades):
     return print(f"{cont} es la cantidad de presonas mayores a 20")
 
 
-edades_mayores_a20((12, 43, 12, 65, 23))
+def imprimir_nombre_inicial(list_nombs):  # ARREGLAR
+    # list_nombs = []
+    num_nombs = 0
+    cont = 0
+
+    # num_nombs = input("Ingrese cuantos nombre quiere ingresar?: ")
+
+    # for i in range(int(num_nombs)):
+    #     list_nombs.append(input(f"{i+1}. Ingrese el nombre: "))
+
+    letra_inicial = input("Ingrese la letra con la que empieza el nombre: ")
+
+    for i in list_nombs:
+        if i[0] == letra_inicial.lower or i[0] == letra_inicial.upper():
+            cont += 1
+
+    return print(f' La cantidad de nombres que comiezan con la letra "{letra_inicial}" es: {cont}')
