@@ -17,3 +17,5 @@ del my_tuple
 
 for i in my_other_tuple:
     print(i)
+
+print(my_other_tuple[4])

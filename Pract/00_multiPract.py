@@ -175,3 +175,12 @@ def imprimir_nombre_inicial(list_nombs):  # ARREGLAR
             cont += 1
 
     return print(f' La cantidad de nombres que comiezan con la letra "{letra_inicial}" es: {cont}')
+
+
+def es_bisiesto():
+    anio = int(input('Digite el año: '))
+
+    if anio % 4 == 0 and anio % 100 != 0 or anio % 400 == 0:
+        print(f'El año {anio} es bisiesto')
+    else:
+        print(f'El año {anio} No es bisiesto')
