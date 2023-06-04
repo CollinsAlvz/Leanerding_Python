@@ -61,3 +61,8 @@ def ejercicio_05():
     return print(info)
 
 
+def ejercicio_06():
+    fecha = "Hoy es miercoles 16 de mayo"
+    print(
+        f"Tamaño de caracteres: {len(fecha)}\nValor de la posición 10: {fecha[10]}\nValor de la posición 3: {fecha[3]}\nValor de la posición -4: {fecha[-4]}\nUltimo caracter: {fecha[-1]}\nCaracteres entre 4 y 18 de la posición : {fecha[4:18]}\nUltimos 5 caracteres: {fecha[-5:]}\nValor de la posición 17: {fecha[17]} | Tipo de dato: {type(fecha[17])}"
+    )
