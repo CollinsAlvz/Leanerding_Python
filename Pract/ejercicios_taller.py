@@ -1,3 +1,7 @@
+
+from random import random, randint, choice
+
+
 def ejercicio_01(dato):
     tipo = type(dato)
 
@@ -66,3 +70,41 @@ def ejercicio_06():
     print(
         f"Tamaño de caracteres: {len(fecha)}\nValor de la posición 10: {fecha[10]}\nValor de la posición 3: {fecha[3]}\nValor de la posición -4: {fecha[-4]}\nUltimo caracter: {fecha[-1]}\nCaracteres entre 4 y 18 de la posición : {fecha[4:18]}\nUltimos 5 caracteres: {fecha[-5:]}\nValor de la posición 17: {fecha[17]} | Tipo de dato: {type(fecha[17])}"
     )
+
+
+def ejercicio_07():
+    edad = int(input("Ingrese su edad: "))
+    numero = int(input("Ingrese un numero: "))
+
+    if edad >= 18:
+        print("El usuario es mayor de edad")
+    else:
+        print("El usuario es menor de edad")
+
+    if edad % 2 == 0:
+        print("La edad del usuario es par")
+    else:
+        print("La edad del usuario es impar")
+
+    if edad >= numero:
+        print(f"La edad del usuario es mayor/igual que el numero {numero}")
+    else:
+        print(
+            f'El numero "{numero}" ingresado por el usuario es mayor que la edad que tiene')
+
+
+def ejecicio_08():
+    list_password = ["a", "b", "c", "d", "e", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+                     "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+                     "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" "/", "_", ".", "-", ","]
+
+    number = int(input("Ingrese el tamaño de la contraseña que desea tener: "))
+    password = " "
+
+    for i in range(number):
+        password += choice(list_password)
+
+    return password
+
+
+print(f"Password Random: {ejecicio_08()}")
