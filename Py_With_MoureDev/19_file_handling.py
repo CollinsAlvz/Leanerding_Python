@@ -1,5 +1,7 @@
 ### File Handling ###
 
+import xml
+import csv
 import json
 import os
 
@@ -27,9 +29,25 @@ json.dump(json_test, json_file)
 
 json_file.close()
 
-for line in json_file.readlines():
-    print(line)
+# for line in json_file.readlines():
+#     print(line)
 
-with open("Py_With_MoureDev/my_file.json") as my_other_file:
+# with open("Py_With_MoureDev/my_file.json") as my_other_file:
+#     for line in my_other_file.readlines():
+#         print(line)
+
+# .csv file
+csv_file = open("Py_With_MoureDev/my_file.csv", "w+")
+csv_writer = csv.writer(csv_file)
+csv_writer.writerow(["name", "surname", "age", "language"])
+csv_writer.writerow(["Collins", "Alvarez", 24, "python"])
+
+csv_file.close()
+
+with open("Py_With_MoureDev/my_file.csv") as my_other_file:
     for line in my_other_file.readlines():
         print(line)
+
+# .xlsx file | import xlsx Debe intalarse el modulo
+
+# .xml file
